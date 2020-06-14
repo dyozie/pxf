@@ -75,6 +75,8 @@ dependencies {
      * Test Dependencies
      *******************************/
 
+    testCompileOnly("org.apache.hadoop:hadoop-annotations:${hadoopVersion}")
+
     // for parquet tests
     testImplementation("org.apache.parquet:parquet-pig:${parquetVersion}")
 
