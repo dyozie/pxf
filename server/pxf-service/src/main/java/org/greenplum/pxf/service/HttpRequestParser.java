@@ -118,7 +118,7 @@ public class HttpRequestParser implements RequestParser<MultiValueMap<String, St
         try {
             fragmentMetadata = deserializeFragmentMetadata(jsonFragmentMetadata);
         } catch (JsonProcessingException e) {
-            throw new IllegalArgumentException(String.format("unable to deserialize fragment meta '%s'", jsonFragmentMetadata));
+            throw new IllegalArgumentException(String.format("unable to deserialize fragment meta '%s'", jsonFragmentMetadata), e);
         }
         context.setFragmentMetadata(fragmentMetadata);
 
